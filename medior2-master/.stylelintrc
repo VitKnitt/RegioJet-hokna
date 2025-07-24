@@ -1,0 +1,62 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-standard-scss"
+  ],
+  "rules": {
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "apply",
+          "layer",
+          "responsive",
+          "screen",
+          "tailwind",
+          "use",
+          "variants"
+        ]
+      }
+    ],
+    "function-no-unknown": [
+      true,
+      {
+        "ignoreFunctions": [
+          "theme"
+        ]
+      }
+    ],
+    "custom-property-pattern": [
+      "^[a-z]{2,}[a-zA-Z0-9]+$",
+      {
+				"message": "Expected custom variable includes letters (starts with two lowercased letters) and numbers, min. size three characters; prefer PascalCase."
+      }
+    ],
+    "selector-class-pattern": [
+      "^[a-z]{2,}[a-zA-Z0-9-_.]+$",
+      {
+				"message": "Expected class selector includes letters (starts with two lowercased letters), numbers, dash and underscore, min. size three characters; prefer PascalCase."
+      }
+    ],
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": ["global"]
+      }
+    ],
+    "scss/at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "tailwind",
+          "apply",
+          "layer",
+          "variants",
+          "responsive",
+          "screen"
+        ]
+      }
+    ],
+    "scss/operator-no-unspaced": null
+  }
+}

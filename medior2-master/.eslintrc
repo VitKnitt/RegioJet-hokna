@@ -1,0 +1,19 @@
+{
+  "extends": ["eslint-config-studentagency-next-typescript"],
+  "ignorePatterns": [],
+  "overrides": [
+    {
+      "files": ["src/**/*.ts", "src/**/*.tsx"],
+      "rules": {
+        "import/no-unused-modules": [
+          "error",
+          {
+            "ignoreExports": ["src/**/index.ts", "src/app/**/*.tsx", "src/utils/config.ts"],
+            "missingExports": true,
+            "unusedExports": true
+          }
+        ]
+      }
+    }
+  ]
+}
